@@ -2,10 +2,10 @@
 
 # Distribution / packaging
 .Python
-env/
+bin/
+env
 build/
 include/
 lib/
-
 
 .env
