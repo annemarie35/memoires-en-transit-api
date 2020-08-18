@@ -1,6 +1,11 @@
-venv
-*.pyc
-staticfiles
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Distribution / packaging
+.Python
+env/
+build/
+include/
+lib/
+
+
 .env
-db.sqlite3
-getting-started/*
