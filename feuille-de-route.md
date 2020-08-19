@@ -16,3 +16,6 @@ If running on Python 3, the venv command is built-in and you can simply do:
 
 `python3 -m venv flask`
 Note, depending on how your Python 3 is installed, your python execution command might differ. You could be running it as python3, python3.5, python3.6.
+
+
+https://medium.com/@dushan14/create-a-web-application-with-python-flask-postgresql-and-deploy-on-heroku-243d548335cc
