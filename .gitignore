@@ -9,5 +9,5 @@ env
 build/
 include/
 lib/
-
 .env
+__pycache__/
