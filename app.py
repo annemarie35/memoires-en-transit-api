@@ -1,22 +1,31 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 import os
 
+from routes import install_routes
 from settings import load_environment_variables
 from sqlalchemy import Column, Integer, String
 
 
 app = Flask(__name__)
 
-load_environment_variables()
+with app.app_context():
+    load_environment_variables()
+    install_routes()
+
+#load_environment_variables()
 
 app.config.from_object(os.environ['APP_SETTINGS'])
+# TODO Remplacer par quelquechose du genre
+#    config_module = f"application.config.{config_name.capitalize()}Config"
+#     app.config.from_object(config_module)
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-class LieuModel(db.Model):
+class Lieu(db.Model):
     __tablename__ = 'lieu'
 
     id = Column(Integer, primary_key=True)
